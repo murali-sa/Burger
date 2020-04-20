@@ -6,7 +6,10 @@ const path = require("path");
 //
 // connect to the database
 //
+/*
 const pool = require(path.join(__dirname, "connection.js"));
+*/
+var connection = require("../config/connection.js");
 //
 // Add double quotation marks around strings for SQL queries
 //
@@ -17,7 +20,8 @@ function addQuotes(x) {
 // sql query
 //
 function querySQL(sql_command, callback) {
-    pool.query(sql_command, (error, results) => {
+//    pool.query(sql_command, (error, results) => {
+    connection.query(sql_command, (error, results) => {
         if (error) throw error;
 
         callback(results);
