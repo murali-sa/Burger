@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({"extended": false}));
 //
 // Set handlebars main
 //
-app.engine("handlebars", exphbs({"defaultLayout": "main"}));
+app.engine("handlebars", exphbs({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 //
 // set up controller
