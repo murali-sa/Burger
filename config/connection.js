@@ -3,22 +3,22 @@ const mysql = require("mysql");
 
 // For testing on localhost
 /* const config_localhost = {
-    "host"    : "localhost",
+    "host"    : "i2cpbxbi4neiupid.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port"    : 3306,
-    "user"    : "devuser",
-    "password": "Abcd123!",
-    "database": "burgers_db"
+    "user"    : "swa8285i5p7uhtt7",
+    "password": "vp41zzfehiaqk4tq",
+    "database": "obgc6pti8sfx5n53"
 };
 
 // Connect to database
-const pool = mysql.createPool(process.env.JAWSDB_URL || config_localhost); 
+const connection = mysql.createPool(process.env.JAWSDB_URL || config_localhost); 
 
 
-module.exports = pool; */
+module.exports = connection; */
 
 // 
 // 
-var connection = mysql.createConnection({
+ var connection = mysql.createConnection({
     "host"    : "localhost",
     "port"    : 3306,
     "user"    : "devuser",
@@ -33,7 +33,7 @@ var connection = mysql.createConnection({
       return;
     }
     console.log("connected as id " + connection.threadId);
-  });
+  }); 
   
   // Export connection for our ORM to use.
   module.exports = connection;
